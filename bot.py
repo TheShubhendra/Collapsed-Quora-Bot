@@ -7,18 +7,18 @@ import telegram
 import os
 import time
 import threading
-from selenium import webdriver
+#from selenium import webdriver
 import requests as req
 
 #TOKEN = '1105525632:AAFZyIrbfgm0PVYPLz-ksE6Gl8B46OGM0K4'
 #driver = webdriver.Chrome("C:/Users/pc/Desktop/Geet/chromedriver.exe")
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_argument("--no-sandbox")
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+#chrome_options = webdriver.ChromeOptions()
+#chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+#chrome_options.add_argument("--headless")
+#chrome_options.add_argument("--disable-dev-shm-usage")
+#chrome_options.add_argument("--no-sandbox")
+#driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 ##driver = webdriver.Chrome("C:/Users/pc/Desktop/Geet/chromedriver.exe")
 TOKEN = os.environ.get("TOKEN")
@@ -66,11 +66,11 @@ def get_answers(url):
     print(url)
     #send()
     try:
-        cont = driver.get(url)
+ #       cont = driver.get(url)
         if "www.quora.com/" in url:
-            elemen = driver.find_element_by_xpath("//*[@class='q-click-wrapper qu-display--inline-block qu-tapHighlight--white qu-textAlign--left qu-cursor--pointer']")
-            data = (elemen.text).split()[0]
-            numofans = data
+  #          elemen = driver.find_element_by_xpath("//*[@class='q-click-wrapper qu-display--inline-block qu-tapHighlight--white qu-textAlign--left qu-cursor--pointer']")
+   #         data = (elemen.text).split()[0]
+            numofans = 100
             case = True
             return numofans, f"Account registered, you have written {numofans} answer/s\nYou will be notified when any of your answers collapses."
             #lst = data.split("\\\\")
