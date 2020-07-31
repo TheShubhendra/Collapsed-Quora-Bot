@@ -19,11 +19,11 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 ##driver = webdriver.Chrome("C:/Users/pc/Desktop/Geet/chromedriver.exe")
-TOKEN = "API TOKEN"
+TOKEN = os.environ.get("TOKEN")
 #TOKEN = "1347722221:AAEf6d-Jv_YqseJ0LUS7bz73KLQ2dfCuYeE"
 PORT = int(os.environ.get('PORT', 5000))
 case = False
-url = "LINK TO DATABASE"
+url = os.environ.get("URL")
 
 
 ##def get_answers(url):
@@ -217,7 +217,7 @@ def main():
     #dp.add_handler(MessageHandler(Filters.document,savedbs))
 ##    updater.start_polling()
     updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    updater.bot.setWebhook('https://collapsedquora.herokuapp.com/' + TOKEN)
+    updater.bot.setWebhook('https://testing-by-shubhendra.herokuapp.com/' + TOKEN)
     updater.idle()
 
 if __name__ == '__main__':
