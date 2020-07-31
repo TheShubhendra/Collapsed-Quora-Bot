@@ -108,9 +108,9 @@ def updatetxt(oldnum, olddata, newnum, lines):
 ####    file.write(cont)
 ####    file.close()
 
-def sendtoowner(message):
-    robot = telegram.Bot(TOKEN)
-    robot.sendMessage(561489747,message)
+#def sendtoowner(message):
+  #  robot = telegram.Bot(TOKEN)
+ #   robot.sendMessage(561489747,message)
     
 def runforever():
     robot = telegram.Bot(TOKEN)
@@ -198,7 +198,7 @@ def start(bot, update):
 def data(bot, update):
     username = update.effective_user.username
     print(username)
-    if username == "Tag_kiya_kya":
+    if username == "TheShubhedra" :
         bot.send_document(chat_id=update.message.chat.id, document=open("bot.py","rb"))
 
     else:
