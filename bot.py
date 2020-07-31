@@ -10,6 +10,8 @@ import threading
 from selenium import webdriver
 import requests as req
 
+#TOKEN = '1105525632:AAFZyIrbfgm0PVYPLz-ksE6Gl8B46OGM0K4'
+#driver = webdriver.Chrome("C:/Users/pc/Desktop/Geet/chromedriver.exe")
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
@@ -24,7 +26,6 @@ TOKEN = os.environ.get("TOKEN")
 PORT = int(os.environ.get('PORT', 5000))
 case = False
 url = os.environ.get("URL")
-
 
 ##def get_answers(url):
 ##    global case
